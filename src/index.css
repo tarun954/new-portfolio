@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: radial-gradient(circle at top, #020617, #000);
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glitch flicker effect */
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #00ff88, -2px -2px #003300; }
+  25% { text-shadow: -2px -2px #00ff88, 2px 2px #003300; }
+  50% { text-shadow: 2px -2px #00ff88, -2px 2px #003300; }
+  75% { text-shadow: -2px 2px #00ff88, 2px -2px #003300; }
+  100% { text-shadow: 2px 2px #00ff88, -2px -2px #003300; }
+}
+
+.logo-glitch {
+  animation: glitch 1s infinite;
+}
