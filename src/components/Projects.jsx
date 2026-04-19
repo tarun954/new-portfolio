@@ -1,7 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import linkImage from "../assets/linkmanager.png";
+import linkImage from "../assets/linkManager.png";
 export default function Projects() {
   const navigate = useNavigate();
 
