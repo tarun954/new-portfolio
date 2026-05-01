@@ -4,7 +4,7 @@ import LinkManager from "./projects/LinkManager";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
-
+import AIResumeMatcher from "./projects/AIResumeMatcher";
 export default function App() {
   return (
     <>
@@ -15,6 +15,7 @@ export default function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects/link-manager" element={<LinkManager />} />
+        <Route path="/projects/ai-resume-matcher" element={<AIResumeMatcher />} />
       </Routes>
     </>
   );

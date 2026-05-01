@@ -1,21 +1,26 @@
 import ProjectCard from "./ProjectCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+
 import linkImage from "../assets/linkManager.png";
+import aiResumeImage from "../assets/Dashboard.png";
+
 export default function Projects() {
   const navigate = useNavigate();
 
   const projects = [
     {
-      title: "AI Notes App",
-      desc: "AI-powered notes with summarization & authentication.",
-    //   image: , // temp reuse
-      action: () => alert("Coming Soon 🚀"),
+      title: "AI Resume Matcher",
+      desc: "AI-powered resume matcher with ATS score, missing skills, job analysis, MongoDB auth, and remote jobs integration.",
+      image: aiResumeImage,
+      tech: ["React", "Node.js", "MongoDB", "Groq AI"],
+      action: () => navigate("/projects/ai-resume-matcher"),
     },
     {
       title: "Link Manager",
-      desc: "Save, search and manage links with favorites.",
-      image: linkImage, // ✅ correct
+      desc: "Save, search, and manage useful links with favorites and database storage.",
+      image: linkImage,
+      tech: ["React", "Node.js", "Express", "MongoDB"],
       action: () => navigate("/projects/link-manager"),
     },
   ];
@@ -33,10 +38,11 @@ export default function Projects() {
       <div className="grid md:grid-cols-2 gap-10">
         {projects.map((p, i) => (
           <motion.div
-            key={i}
+            key={p.title}
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.2 }}
+            viewport={{ once: true }}
           >
             <ProjectCard {...p} />
           </motion.div>
