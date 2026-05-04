@@ -92,7 +92,7 @@ export default function DevAssistAI() {
       {/* Links */}
       <div className="flex gap-6 flex-wrap">
         <a
-          href="YOUR_DEVASSIST_FRONTEND_URL"
+          href="Yhttps://devassist-ai-frontend.vercel.app/"
           target="_blank"
           rel="noreferrer"
           className="px-6 py-3 bg-green-500 text-black rounded-xl font-semibold hover:bg-green-400 transition"
@@ -101,7 +101,7 @@ export default function DevAssistAI() {
         </a>
 
         <a
-          href="YOUR_GITHUB_FRONTEND_REPO"
+          href="https://github.com/tarun954/devassist-ai-frontend"
           target="_blank"
           rel="noreferrer"
           className="px-6 py-3 border border-green-400 text-green-400 rounded-xl hover:bg-green-400 hover:text-black transition"
@@ -110,7 +110,7 @@ export default function DevAssistAI() {
         </a>
 
         <a
-          href="YOUR_GITHUB_BACKEND_REPO"
+          href="https://github.com/tarun954/devassist-ai-backend"
           target="_blank"
           rel="noreferrer"
           className="px-6 py-3 border border-green-400 text-green-400 rounded-xl hover:bg-green-400 hover:text-black transition"
