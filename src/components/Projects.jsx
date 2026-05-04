@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import devassistAI from "../assets/dev-assist.png";
 
 import linkImage from "../assets/linkManager.png";
 import aiResumeImage from "../assets/Dashboard.png";
@@ -23,6 +24,15 @@ export default function Projects() {
       tech: ["React", "Node.js", "Express", "MongoDB"],
       action: () => navigate("/projects/link-manager"),
     },
+    {
+      title: "DevAssist AI",
+      image: devassistAI,
+      description:
+        "AI-powered developer assistant that analyzes production logs, detects root causes, suggests fixes, and optimizes messy API responses into clean JSON, TypeScript interfaces, and MongoDB schemas.",
+      tech: ["React", "Node.js", "Express", "Groq AI", "MongoDB", "Vercel", "Render"],
+      live: "YOUR_VERCEL_FRONTEND_URL",
+      github: "YOUR_GITHUB_REPO_URL",
+    }
   ];
 
   return (

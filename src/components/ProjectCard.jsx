@@ -1,10 +1,26 @@
 import { motion } from "framer-motion";
 
-export default function ProjectCard({ title, desc, image, tech = [], action }) {
+export default function ProjectCard({
+  title,
+  desc,
+  image,
+  tech = [],
+  live,
+  github,
+  action,
+}) {
+  const handleCardClick = () => {
+    if (action) {
+      action();
+    } else if (live) {
+      window.open(live, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <motion.div
       whileHover={{ scale: 1.04 }}
-      onClick={action}
+      onClick={handleCardClick}
       className="cursor-pointer bg-white/5 backdrop-blur-xl border border-white/10 
                  rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 
                  hover:border-green-400 hover:shadow-green-500/20"
@@ -35,7 +51,35 @@ export default function ProjectCard({ title, desc, image, tech = [], action }) {
           </div>
         )}
 
-        <div className="mt-6 text-green-300 font-medium">View Project →</div>
+        <div className="mt-6 flex gap-4 flex-wrap">
+          {live && (
+            <a
+              href={live}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-green-300 font-medium hover:text-green-200"
+            >
+              Live Demo →
+            </a>
+          )}
+
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-gray-300 font-medium hover:text-white"
+            >
+              GitHub →
+            </a>
+          )}
+
+          {!live && !github && (
+            <span className="text-green-300 font-medium">View Project →</span>
+          )}
+        </div>
       </div>
     </motion.div>
   );

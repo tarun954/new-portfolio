@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import AIResumeMatcher from "./projects/AIResumeMatcher";
+import DevAssistAI from "./pages/DevAssistAI";
 export default function App() {
   return (
     <>
@@ -16,9 +17,11 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects/link-manager" element={<LinkManager />} />
         <Route path="/projects/ai-resume-matcher" element={<AIResumeMatcher />} />
+        <Route path="/devassist-ai" element={<DevAssistAI />} />
       </Routes>
     </>
   );
 }
+
 
 
