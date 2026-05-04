@@ -2,10 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // Add your screenshots here
-import devassist1 from "../assets/devassist-1.png";
-import devassist2 from "../assets/devassist-2.png";
-import devassist3 from "../assets/devassist-3.png";
-import devassist4 from "../assets/devassist-4.png";
+import devassist from "../assets/dev-assist.png";
 
 export default function DevAssistAI() {
   return (
@@ -32,18 +29,13 @@ export default function DevAssistAI() {
       </p>
 
       {/* Screenshots */}
-      {[devassist1, devassist2, devassist3, devassist4].map((img, index) => (
-        <div
-          key={index}
-          className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl mb-12"
-        >
-          <img
-            src={img}
-            alt="DevAssist AI"
-            className="w-full hover:scale-105 transition duration-500"
-          />
-        </div>
-      ))}
+      <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl mb-12">
+              <img
+                src={devassist}
+                alt="AI Resume Matcher"
+                className="w-full hover:scale-105 transition duration-500"
+              />
+            </div>
 
       {/* Tech Stack */}
       <div className="mb-10">
@@ -92,7 +84,7 @@ export default function DevAssistAI() {
       {/* Links */}
       <div className="flex gap-6 flex-wrap">
         <a
-          href="Yhttps://devassist-ai-frontend.vercel.app/"
+          href="https://devassist-ai-frontend.vercel.app/"
           target="_blank"
           rel="noreferrer"
           className="px-6 py-3 bg-green-500 text-black rounded-xl font-semibold hover:bg-green-400 transition"

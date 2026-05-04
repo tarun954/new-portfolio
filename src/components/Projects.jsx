@@ -26,13 +26,19 @@ export default function Projects() {
     },
     {
       title: "DevAssist AI",
+      desc: "AI-powered developer assistant that analyzes production logs, detects root causes, suggests fixes, and optimizes messy API responses into clean JSON, TypeScript interfaces, and MongoDB schemas.",
       image: devassistAI,
-      description:
-        "AI-powered developer assistant that analyzes production logs, detects root causes, suggests fixes, and optimizes messy API responses into clean JSON, TypeScript interfaces, and MongoDB schemas.",
-      tech: ["React", "Node.js", "Express", "Groq AI", "MongoDB", "Vercel", "Render"],
-      live: "YOUR_VERCEL_FRONTEND_URL",
-      github: "YOUR_GITHUB_REPO_URL",
-    }
+      tech: [
+        "React",
+        "Node.js",
+        "Express",
+        "Groq AI",
+        "MongoDB",
+        "Vercel",
+        "Render",
+      ],
+      action: () => navigate("/projects/devassist-ai"),
+    },
   ];
 
   return (
